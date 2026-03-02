@@ -43,8 +43,9 @@
 ## Установка и запуск
 
 ```bash
-git clone https://github.com/username/dnd-character-sheet.git
+git clone https://github.com/lamborg482/Adventurers_Codex.git
 cd dnd-character-sheet
 npm install
 npm start
+
 
