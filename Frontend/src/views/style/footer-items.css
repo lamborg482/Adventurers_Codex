@@ -1,0 +1,32 @@
+.footer-messeg {
+    width: 1vw;
+    height: 1vw;
+}
+
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 80vw;
+}
+
+.url-mess {
+    font-size: 1.5vw;
+    gap: 1vw;
+}
+
+.title-footer {
+    font-size: 2vw;
+}
+
+.footer-messeg__messege-url {
+    width: 12vw;
+    display: flex;
+    justify-content: space-between;
+}
