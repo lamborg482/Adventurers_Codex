@@ -73,7 +73,7 @@
     background-image: url('@/views/style/img/button-img.png');
 }
 
-/* Верхняя и нижняя линии (анимация при наведении) */
+/*  нижняя линии (анимация при наведении) */
 .button-line-top,
 .button-line-bottom {
     position: absolute;

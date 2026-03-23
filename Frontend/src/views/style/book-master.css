@@ -1,0 +1,1381 @@
+.book-master {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1vw;
+    align-items: center;
+}
+
+.book-master__all-items {
+    display: flex;
+    width: 56vw;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-style: flat;
+    isolation: isolate;
+}
+
+.book-master__all-items.shift-left {
+    transform: translateX(-2%);
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.book-master__menu-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 28vw;
+}
+
+.creature-grid {
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 15vw;
+    scrollbar-color: #790202 #ccc;
+}
+
+.menu-header {
+    font-size: 1.6vw;
+}
+
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 16vw;
+}
+
+.menu-nav__all-but {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.3vw;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.1vw;
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1.4vw;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    color: #790202;
+}
+
+.nav-btn.active:hover {
+    color: #a00202;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1) translateY(-2px);
+}
+
+.nav-btn__line-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: transform 0.9s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+
+
+.book-master__viwe-all {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30vw;
+    height: 26vw;
+    justify-content: flex-start;
+}
+
+.card-actions__button {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 1.5vw;
+    border: none;
+}
+
+
+
+.creature-card__cart-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 25vw;
+}
+
+/* создание персонажей */
+
+.book-master__viwe-create {
+    font-size: 1.6vw;
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    padding: 0;
+    margin-bottom: 1.6vw;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-master__viwe-create:hover {
+    color: rgb(109, 9, 9);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.book-master__line-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.9s ease, background-color 0.3s ease;
+    transform-origin: left;
+}
+
+.book-master__viwe-create .book-master__line-bottom {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.book-master__viwe-create:hover .book-master__line-bottom {
+    transform: scaleX(1.2);
+    background-color: black;
+}
+
+
+
+/* поиск */
+
+.book-master__viwe-serche {
+    width: 100%;
+}
+
+.book-master__search-container {
+    display: flex;
+    margin-bottom: 2vw;
+}
+
+.search-input__all-input {
+    display: flex;
+    width: 62%;
+    flex-direction: column;
+}
+
+.book-master__search-input {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1.5vw;
+    width: 100%;
+}
+
+.search-input__line-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.9s ease, background-color 0.3s ease;
+    transform-origin: left;
+}
+
+.search-input__all-input .search-input__line-bottom {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.search-input__all-input:hover .search-input__line-bottom{
+    transform: scaleX(1.07);
+    background-color: black;
+}
+
+
+.book-master__search-input:focus {
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.book-master__search-button {
+    background-image: url("@/views/style/img/button-search.png");
+    width: 1vw;
+    height: 1vw;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+.book-master__search-button {
+    width: 3vw;
+    height: 3vw;
+}
+
+.search-button__bacground-icon {
+    width: 4vw;
+    height: 3vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-button__bacground-icon:hover {
+    color: rgb(109, 9, 9);
+    transform: translateY(-4px) scale(1.01);
+}
+
+
+
+
+/* Фильтр */
+
+.book-master__viwe-filtr {
+    display: flex;
+    width: 32vw;
+    justify-content: space-between;
+}
+
+.filter-select {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1.2vw;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.viwe-filtr__all-select {
+    display: flex;
+    flex-direction: column;
+}
+
+.viwe-filtr__line-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.9s ease, background-color 0.3s ease;
+    transform-origin: left;
+}
+
+.viwe-filtr__all-select .viwe-filtr__line-bottom {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.viwe-filtr__all-select:hover .viwe-filtr__line-bottom{
+    transform: scaleX(1.1);
+    background-color: black;
+}
+
+.reset-filters {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2vw;
+}
+
+.reset-filters__line-bottom {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.9s ease, background-color 0.3s ease;
+    transform-origin: left;
+}
+
+.reset-filters .reset-filters__line-bottom {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.reset-filters:hover .reset-filters__line-bottom{
+    transform: scaleX(1.2);
+    background-color: black;
+}
+
+
+
+.nav-btn:hover .nav-btn__line-bottom {
+    transform: scaleX(0.3);
+    background-color: black;
+}
+
+.nav-btn.active .nav-btn__line-bottom {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.nav-btn.active:hover .nav-btn__line-bottom {
+    transform: scaleX(0.3);
+    background-color: black;
+}
+
+.menu-line_vertical {
+    height: 2vw;
+    position: absolute;
+}
+
+.menu-line {
+    height: 30vw;
+    width: 0.09vw;
+    background-color: rgba(0, 0, 0, 1);
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.menu-line:hover {
+    color: rgb(109, 9, 9);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.book-master_menu-line {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    width: 20vw;
+    height: 32vw;
+    align-items: flex-start;
+}
+
+
+/* карточки с мобами */
+
+
+.viwe-display__line-cart {
+    display: flex;
+    flex-direction: column;
+}
+
+.creature-card__line-item {
+    height: 0.09vw;
+    width: 30vw;
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    pointer-events: none;
+    overflow: hidden;
+    transition: transform 0.9s ease, background-color 0.3s ease;
+}
+
+.viwe-display__all-item {
+    width: 32vw;
+}
+
+.creature-card {
+    width: 32vw;
+}
+
+.creature-card .creature-card__line-item {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.creature-card:hover .creature-card__line-item {
+    transform: scaleX(1.1);
+    background-color: black;
+}
+
+.creature-card .card-header {
+    font-size: 1.5vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.creature-card:hover .card-header {
+    color: rgb(109, 9, 9);
+    transform: scale(1.01);
+}
+
+.creature-card:active .card-header {
+    color: rgb(109, 9, 9);
+    transform: scale(1.01);
+}
+
+.creature-card .text-cart {
+    font-size: 1.3vw;
+    transition: all 0.3s ease-in-out;
+}
+
+.creature-card:hover .text-cart {
+    color: rgb(109, 9, 9);
+    transform: translateY(-4px) scale(1.01);
+}
+
+.creature-card:active .text-cart {
+    color: rgb(109, 9, 9);
+    transform: translateY(-4px) scale(1.01);
+}
+
+
+
+
+
+
+/* просмотр доп информации о мобе */
+
+.description-info__text{
+    overflow: auto;           /* включаем прокрутку, если контент не помещается */
+    word-wrap: break-word;
+}
+
+.creature-detail {
+    display: flex;
+    flex-direction: column;
+    height: 4vw;
+    justify-content: space-between;
+}
+
+.creature-detail__component-stat {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-content__class-armor {
+    margin: 0;
+}
+
+.modal-content__CR{
+    margin: 0;
+}
+
+.modal-content__type-npc {
+    margin: 0;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 31vw;
+}
+
+.modal-content__title-cont {
+    font-size: 1.8vw;
+    margin: 0;
+}
+
+.creature-detail {
+    font-size: 1.4vw;
+}
+
+.stats-block__title-content {
+    font-size: 1.3vw;
+}
+
+li::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('@/views/style/img/button-img.png') no-repeat center;
+    background-size: contain;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-left: 2vw;
+}
+
+.stats-block__description-all {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-block__description-title {
+    margin: 0;
+}
+
+.stat-block__description-info {
+    width: 25vw;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.modedal-detail__duing {
+    margin-bottom: 2vw;
+}
+
+.modal-content__all-component {
+    display: flex;
+    width: 38vw;
+    justify-content: space-between;
+}
+
+.modal-actions__close-but {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 24px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #2c2c2c;
+    border: none;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+
+
+/* Псевдоэлементы для иконок слева и справа */
+.modal-actions__close-but::before,
+.modal-actions__close-but::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+.modal-actions__close-but::before {
+    margin-right: 10px;
+}
+.modal-actions__close-but::after {
+    margin-left: 10px;
+}
+
+/* Иконки для конкретных кнопок (у вас одинаковые) */
+
+.modal-actions__close-but::before,
+.modal-actions__close-but::after {
+    background-image: url('@/views/style/img/button-img.png');
+}
+
+/*  нижняя линии (анимация при наведении) */
+.button-line-top,
+.button-line-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: transform 0.8s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+.button-line-top {
+    top: 0;
+}
+.button-line-bottom {
+    bottom: 0;
+}
+
+/* Эффекты при наведении */
+.modal-actions__close-but:hover {
+    transform: scale(1.1);
+}
+.modal-actions__close-but:hover .button-line-top,
+.modal-actions__close-but:hover .button-line-bottom {
+    transform: scaleX(0.2);
+    background-color: black;
+}
+
+/* мод окно редактирование создание  */
+
+.form-group{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.2vw;
+}
+
+.form-group__doing{
+    display: flex;
+    align-items: flex-start;
+    width: 21vw;
+    margin-bottom: 0.5vw;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 4vw;
+}
+
+
+.modal-content__comp-all {
+    display: flex;
+}
+
+.form-group__doing-title {
+    font-size: 1.5vw;
+}
+
+.form-group__doing-input {
+    width: 100%;
+    padding-right: 30px; 
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1.3vw;
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 15vw;
+    margin-left: 1vw;
+}
+
+.input-wrapper::after {
+    content: "";
+    width: 30px;           /* задайте явный размер */
+    height: 30px;
+    background-image: url('@/views/style/img/button-img.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none;  /* чтобы клик проходил сквозь иконку на input */
+}
+.form-group__component-one {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 1.3vw;
+    outline: none;
+}
+
+.form-group__al-component {
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+.modal-content__all {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vw;
+}
+
+.form-group__component-two {
+    width: 80%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 1s ease, background-color 0.3s ease;
+    transform-origin: left;
+}
+
+.form-group__al-component .form-group__component-two {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.form-group__al-component:hover .form-group__component-two{
+    transform: scaleX(1.1);
+    background-color: black;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* две равные колонки */
+    gap: 1vw; /* промежуток между элементами (по желанию) */
+    width: 13vw;
+}
+
+.stat-item {
+    width: 6vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-grid__lable-stat {
+    font-size: 1.2vw;
+}
+
+.stats-grid__input-stat {
+    font-size: 1vw;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.stats-grid__lable-component {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.stats-grid__label-but {
+    width: 75%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 1s ease, background-color 0.3s ease;
+    transform-origin: left;
+}
+
+.stats-grid__all-item {
+    width: 5.5vw;
+    padding: 4px 0; /* опционально */
+}
+
+.stats-grid__all-item .stats-grid__label-but {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.stats-grid__all-item:hover .stats-grid__label-but {
+    transform: scaleX(1.3);
+    background-color: black; /* можно изменить при необходимости */
+}
+
+.model-content__deteil-info {
+    display: flex;
+    margin-bottom: 0vw;
+}
+
+.stats-group__conteiner {
+    display: flex;
+    justify-content: space-around;
+}
+
+.stats-group__title {
+    margin: 0;
+}
+
+.modal-actions__but-close {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #2c2c2c;
+    border: none;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+
+
+/* Псевдоэлементы для иконок слева и справа */
+.modal-actions__but-close::before,
+.modal-actions__but-close::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+.modal-actions__but-close::before {
+    margin-right: 10px;
+}
+.modal-actions__but-close::after {
+    margin-left: 10px;
+}
+
+/* Иконки для конкретных кнопок (у вас одинаковые) */
+
+.modal-actions__but-close::before,
+.modal-actions__but-close::after {
+    background-image: url('@/views/style/img/button-img.png');
+}
+
+
+
+/*  нижняя линии (анимация при наведении) */
+.button-line-top,
+.button-line-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: transform 0.8s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+.button-line-top {
+    top: 0;
+}
+.button-line-bottom {
+    bottom: 0;
+}
+
+/* Эффекты при наведении */
+.modal-actions__but-close:hover {
+    transform: scale(1.1);
+}
+.modal-actions__but-close:hover .button-line-top,
+.modal-actions__but-close:hover .button-line-bottom {
+    transform: scaleX(0.2);
+    background-color: black;
+}
+
+
+
+
+
+.modal-actions__but-save {
+    background-color: rgba(0, 0, 0, 0);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #2c2c2c;
+    border: none;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+
+
+/* Псевдоэлементы для иконок слева и справа */
+.modal-actions__but-save::before,
+.modal-actions__but-save::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+.modal-actions__but-save::before {
+    margin-right: 10px;
+}
+.modal-actions__but-save::after {
+    margin-left: 10px;
+}
+
+/* Иконки для конкретных кнопок (у вас одинаковые) */
+
+.modal-actions__but-save::before,
+.modal-actions__but-save::after {
+    background-image: url('@/views/style/img/button-img.png');
+}
+
+
+
+/*  нижняя линии (анимация при наведении) */
+.button-line-top,
+.button-line-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: transform 0.8s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+.button-line-top {
+    top: 0;
+}
+.button-line-bottom {
+    bottom: 0;
+}
+
+/* Эффекты при наведении */
+.modal-actions__but-save:hover {
+    transform: scale(1.1);
+}
+.modal-actions__but-save:hover .button-line-top,
+.modal-actions__but-save:hover .button-line-bottom {
+    transform: scaleX(0.2);
+    background-color: black;
+}
+
+.description-info__text {
+    width: 100%;
+    height: 11vw;
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    padding: 1vw;
+    border: 1px solid black; 
+    outline: none;
+    resize: vertical;  
+}
+
+.description-info__text:focus {
+border-color: #5e0303;        /* меняем цвет границы при фокусе (опционально) */
+}
+
+/* Анимация появления/исчезновения модального окна – синхронизирована с контентом */
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+    transition: opacity 0.4s ease; /* та же длительность, что и у сдвига */
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+    opacity: 0;
+}
+
+.modal-fade-enter-active .modal-content,
+.modal-fade-leave-active .modal-content {
+    transition: transform 0.4s ease, opacity 0.4s ease; /* синхронизация */
+}
+
+.modal-fade-enter-from .modal-content,
+.modal-fade-leave-to .modal-content {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+
+/* ===== Адаптация для планшетов (ширина экрана до 1024px) ===== */
+@media screen and (max-width: 1024px) {
+  .book-master__all-items {
+    width: 80vw;
+  }
+
+  .book-master__menu-all {
+    height: 32vw;
+  }
+
+  .menu-nav {
+    height: 18vw;
+  }
+
+  .nav-btn {
+    font-size: 2vw;
+    height: 3vw;
+  }
+
+  .book-master__viwe-all {
+    width: 45vw;
+    height: 40vw;
+  }
+
+  .creature-grid {
+    max-height: 25vw;
+  }
+
+  .creature-card {
+    width: 45vw;
+  }
+
+  .creature-card__cart-item {
+    width: 38vw;
+  }
+
+  .creature-card__line-item {
+    width: 45vw;
+  }
+
+  .viwe-display__all-item {
+    width: 45vw;
+  }
+
+  .combat-container,
+  .datasets-container {
+    width: 45vw;
+  }
+
+  .combat-tracker {
+    max-height: 30vw;
+  }
+
+  .modal-content {
+    width: 70vw;
+    height: auto;
+    max-height: 80vh;
+  }
+
+  .modal-lg {
+    width: 65vw;
+  }
+
+  .side-modal-content {
+    width: 350px;
+    font-size: 16px;
+  }
+}
+
+/* ===== Адаптация для мобильных устройств (ширина экрана до 768px) ===== */
+@media screen and (max-width: 768px) {
+  /* Основной контейнер становится вертикальным */
+  .book-master__all-items {
+    flex-direction: column;
+    width: 95%;
+    transform: none !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+  }
+
+  /* Левое меню занимает всю ширину */
+  .book-master_menu-line {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .book-master__menu-all {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .menu-header h2 {
+    font-size: 28px;
+    margin: 10px 0;
+  }
+
+  .menu-nav {
+    height: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .menu-nav__all-but {
+    height: auto;
+    width: auto;
+  }
+
+  .nav-btn {
+    height: auto;
+    font-size: 18px;
+    padding: 5px 10px;
+  }
+
+  .nav-btn__line-bottom {
+    display: none; /* на мобильных убираем линии для компактности */
+  }
+
+  .menu-line {
+    display: none; /* вертикальная линия не нужна при вертикальной компоновке */
+  }
+
+  .logout-btn {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  /* Основная область просмотра */
+  .book-master__viwe-all {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+
+  /* Кнопка создания */
+  .book-master__viwe-create {
+    font-size: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  /* Поиск */
+  .book-master__search-input {
+    font-size: 18px;
+  }
+
+  .search-button__bacground-icon {
+    width: 40px;
+    height: 30px;
+  }
+
+  /* Фильтры */
+  .book-master__viwe-filtr {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .filter-select {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .viwe-filtr__all-select {
+    width: 100%;
+  }
+
+  .viwe-filtr__line-bottom {
+    display: none;
+  }
+
+  .reset-filters {
+    font-size: 16px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .reset-filters__line-bottom {
+    display: none;
+  }
+
+  /* Карточки существ */
+  .viwe-display__all-item {
+    width: 100%;
+  }
+
+  .creature-card {
+    width: 100%;
+  }
+
+  .creature-card__cart-item {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .card-actions__button {
+    font-size: 24px;
+  }
+
+  .text-cart {
+    font-size: 16px;
+  }
+
+  .creature-card__line-item {
+    width: 100%;
+    height: 2px;
+  }
+
+  .creature-grid {
+    max-height: 400px;
+  }
+
+  /* Боевое окно */
+  .combat-container {
+    width: 100%;
+  }
+
+  .combat-toolbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .combat-btn {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .combat-tracker {
+    max-height: 500px;
+  }
+
+  .combatant-card__header {
+    font-size: 16px;
+  }
+
+  .combatant-stats {
+    font-size: 14px;
+  }
+
+  .hp-btn {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+
+  /* Наборы данных */
+  .datasets-container {
+    width: 100%;
+  }
+
+  .horizontal-scroll {
+    max-height: 400px;
+    flex-direction: column;
+  }
+
+  .dataset-card {
+    min-width: 100%;
+    flex-direction: row;
+  }
+
+  .dataset-card__image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dataset-card__info h4 {
+    font-size: 18px;
+  }
+
+  .dataset-card__info p {
+    font-size: 14px;
+  }
+
+  /* Модальные окна */
+  .modal-overlay {
+    align-items: flex-end; /* для мобильных можно выравнивать снизу */
+  }
+
+  .modal-content {
+    width: 95%;
+    max-width: 95%;
+    height: auto;
+    max-height: 90vh;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .modal-lg {
+    width: 95%;
+  }
+
+  .modal-content__all {
+    height: auto;
+  }
+
+  .modal-content__comp-all {
+    flex-direction: column;
+  }
+
+  .form-group {
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .form-group__al-component {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .form-group__component-one {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .stats-grid {
+    width: 100%;
+    gap: 5px;
+  }
+
+  .stat-item {
+    width: 100%;
+  }
+
+  .stats-grid__lable-stat {
+    font-size: 14px;
+  }
+
+  .stats-grid__input-stat {
+    font-size: 14px;
+    width: 50px;
+  }
+
+  .stats-block__description-info {
+    width: 100%;
+  }
+
+  .description-info__text {
+    height: 150px;
+    font-size: 14px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-actions__but-close,
+  .modal-actions__but-save,
+  .modal-actions__close-but {
+    width: 100%;
+    font-size: 18px;
+    padding: 10px;
+  }
+
+  .modal-actions__close-but::before,
+  .modal-actions__close-but::after,
+  .modal-actions__but-close::before,
+  .modal-actions__but-close::after,
+  .modal-actions__but-save::before,
+  .modal-actions__but-save::after {
+    display: none; /* убираем иконки на мобильных для экономии места */
+  }
+
+  /* Боковая модалка на мобильных занимает весь экран */
+  .side-modal-content {
+    width: 100%;
+    max-width: 100%;
+    border-left: none;
+    border-top: 2px solid #790202;
+    padding: 15px;
+  }
+
+  .side-modal-close {
+    top: 5px;
+    right: 5px;
+  }
+
+  .side-modal-content h2 {
+    font-size: 24px;
+  }
+
+  .side-modal-content p,
+  .side-modal-content li {
+    font-size: 16px;
+  }
+}
+
+/* Дополнительная адаптация для очень маленьких экранов (до 480px) */
+@media screen and (max-width: 480px) {
+  .nav-btn {
+    font-size: 16px;
+  }
+
+  .book-master__viwe-create {
+    font-size: 18px;
+  }
+
+  .creature-card__cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .card-actions {
+    align-self: flex-end;
+  }
+
+  .combatant-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .combatant-remove {
+    align-self: flex-end;
+  }
+
+  .combatant-actions {
+    justify-content: center;
+  }
+}

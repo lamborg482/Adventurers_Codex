@@ -1,0 +1,149 @@
+
+
+.author-cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 20vw;
+}
+
+.log-in {
+    display: flex;
+    align-items: center;
+}
+
+.log-form__all-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 11vw;
+    justify-content: space-between;
+
+}
+
+.log-form__component-one {
+    display: flex;
+    align-items: center;
+    flex-direction: color;
+    justify-content: space-between;
+    width: 32vw;
+}
+
+/* input */
+
+
+.form-log__all-input {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: black;
+    font-size: 1.4vw;
+    outline: none;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.form-auth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0.2vw;
+}
+
+.form-auth__line-botom {
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    pointer-events: none;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.7s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+
+.form-auth .form-auth__line-botom {
+    transform: scaleX(1);
+    background-color: black;
+}
+
+.form-auth:hover .form-auth__line-botom{
+    transform: scaleX(1.2);
+    background-color: rgb(93, 0, 0);
+}
+
+
+/* кнопка вход  */
+
+.auth_butt__all-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 24px;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: #2c2c2c;
+    border: none;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+/* Псевдоэлементы для иконок слева и справа */
+.auth_butt__all-item::before,
+.auth_butt__all-item::after {
+    content: "";
+    width: 50px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+.auth_butt__all-item::before {
+    margin-right: 10px;
+}
+.auth_butt__all-item::after {
+    margin-left: 10px;
+}
+
+/* Иконки для конкретных кнопок (у вас одинаковые) */
+
+.auth_butt__all-item::before,
+.auth_butt__all-item::after {
+    background-image: url('@/views/style/img/button-img.png');
+}
+
+/*  нижняя линии (анимация при наведении) */
+.button-line-top,
+.button-line-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+    transition: transform 0.6s ease, background-color 0.3s ease;
+    transform-origin: center;
+}
+
+.button-line-top {
+    top: 0;
+}
+
+.button-line-bottom {
+    bottom: 0;
+}
+
+
+/* Эффекты при наведении */
+.auth_butt__all-item:hover {
+    transform: scale(1.1);
+}
+.auth_butt__all-item:hover .button-line-top,
+.auth_butt__all-item:hover .button-line-bottom {
+    transform: scaleX(0.6);
+    background-color: black;
+}

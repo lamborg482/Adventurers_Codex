@@ -52,18 +52,22 @@
       <div class="header-all__header-menu">
         <router-link to="/menu" class="button-header header-menu__menu-url">Menu</router-link>
       </div>
-      <div class="header-all__header-auth">
-        <router-link to="/author" class="button-header header-auth__auth-url">Вход</router-link>
+      <!-- Кнопки входа/регистрации (показываются, если пользователь не авторизован) -->
+      <div v-if="!isAuthenticated" class="header-all__header-auth">
+        <router-link to="/auth" class="button-header header-auth__auth-url">Вход</router-link>
       </div>
-      <div class="header-all__header-auth">
-        <router-link to="/registr" class="button-header header-menu__menu-url">Регистрация</router-link>
+      <div v-if="!isAuthenticated" class="header-all__header-auth">
+        <router-link to="/register" class="button-header header-menu__menu-url">Регистрация</router-link>
+      </div>
+      <!-- Кнопка выхода (показывается, если пользователь авторизован) -->
+      <div v-if="isAuthenticated" class="header-all__header-auth">
+        <button @click="logout" class="button-header header-auth__auth-url">Выйти</button>
       </div>
     </div>
   </header>
   <main>
       <router-view />  <!-- сюда будет подгружаться содержимое страниц -->
   </main>
-
   <footer>
     <div class="footer-items">
       <div class="footer-items__logo-all">
@@ -125,3 +129,28 @@
 <style>
 @import "@/views/style/global_style.css";
 </style>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+const isAuthenticated = ref(false)
+
+const checkAuth = () => {
+  isAuthenticated.value = !!localStorage.getItem('token')
+}
+
+const logout = () => {
+  localStorage.removeItem('token')
+  checkAuth()
+  router.push('/') // или другой путь после выхода
+}
+
+// Слушаем изменения localStorage (например, при входе из другой вкладки)
+window.addEventListener('storage', checkAuth)
+
+onMounted(() => {
+  checkAuth()
+})
+</script>
